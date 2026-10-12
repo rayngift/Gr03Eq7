@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+    <!-- Bootstrap 4 Styling -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+  
+    <div class="content">
+        <div id="root">
+        </div>
+    </div>
+<script type="text/babel">
+    class Commentaire extends React.Component {
+        render() {
+          return (
+            <div>
+                <textarea class="form-control" placeholder="Tapez un commentaire..."></textarea>
+                 <small>120 Restants</small>
+            </div>
+          )
+        }
+    }
+
+    class Icone extends React.Component {
+        render() {
+          return (
+            <div>
+                <span class="fa-stack fa-sm">
+                 <i class="fa fa-circle fa-stack-2x blue-icon"></i>
+                 <i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
+                </span>
+            </div>
+         )
+        }
+     }
+
+    class Pictogramme extends React.Component {
+    render() {
+      return (
+    <div>
+        <Icone />
+        <hr />
+        <div>
+          <button
+            type="button"
+            className="btn no-outline btn-secondary"
+            onClick={this.props.onAimer}
+          >
+            <i className="fa fa-thumbs-o-up fa-4 align-middle" aria-hidden="true"></i>
+            &nbsp;
+            <span className="align-middle">Aimer</span>
+          </button>
+        </div>
+      </div>
+        )
+    }
+    }
+
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: 'Bonne découverte des composants React'
+    };
+    this.changerMessage = this.changerMessage.bind(this);
+  }
+
+  changerMessage() {
+    this.setState({ message: "Premier défi réussi" });
+  }
+render() {
+return (
+  <div class="col-6 offset-3">
+    <div class="card">
+      <div class="card-block">
+        <div class="row">
+          <div class="col-2">
+            <img src="https://thomas-bart.com/wp-content/uploads/2017/03/developper-1680x1201.jpg"  class="rounded float-left" clas="img-thumbnail" width="80" height="70" />
+          </div>
+          <div class="col-10 profile-row">
+            <div class="row">
+              <a href="#"><h1> Débuter avec React </h1></a>
+            </div>
+          </div>
+        </div>
+        <p>{this.state.message}</p>
+    
+        <div>
+          <Pictogramme onAimer={this.changerMessage}/>
+        </div>
+      </div>
+
+      <div class="card-footer text-muted">
+       <Commentaire />
+      </div>
+
+    </div>
+  </div>
+    )
+}
+}
+        
+
+ReactDOM.render(<App />, document.getElementById("root"))
+</script>
+
+</body>
+</html>
