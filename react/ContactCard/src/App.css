@@ -1,0 +1,38 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.contact-card {
+  width: 260px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+}
+
+/* Cadre identique pour toutes les images */
+.contact-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* l'image remplit le cadre sans être déformée */
+  border-radius: 8px;
+}
+
+.contact-card h3 {
+  margin: 12px 0 8px;
+  color: #04567f;
+  font-size: 22px;
+}
+
+.contact-card p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 14px;
+}
