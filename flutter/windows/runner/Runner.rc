@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "carteeetudiant" "\0"
+            VALUE "FileDescription", "chap6_formulaire" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "carteeetudiant" "\0"
+            VALUE "InternalName", "chap6_formulaire" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2026 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "carteeetudiant.exe" "\0"
-            VALUE "ProductName", "carteeetudiant" "\0"
+            VALUE "OriginalFilename", "chap6_formulaire.exe" "\0"
+            VALUE "ProductName", "chap6_formulaire" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
